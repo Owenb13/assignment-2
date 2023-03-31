@@ -204,6 +204,9 @@ def rpc_game():
 
 def mario_stairs():
     level  = int(input("enter a value for the height of the level: "))
+
+    #create a for loop to add spaces 
+    # create a fo loop to put in hashtags 
     
 
 print("choose one of the following options") # create a list of options for the user to choose from

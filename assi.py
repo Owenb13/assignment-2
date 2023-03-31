@@ -119,24 +119,37 @@ def ascii_string_values():
 def change_machine():
 
     coins =[25,10,5]
-
-    coin_counts = []
+ # has the coin denominations as an array stored in coins
+    coin_counts = [0,0,0]
+    #creating an empty variable for coincounts 
 
     x = float(input("please enter a float value: "))
+    # asking the user to enter a float value and store it in x 
      
-    int_x = int(x)
-
-    cents = x * 100 - int_x * 100
+    int_x = int(x) 
+    #create a variable that is the integer of x
+    money = 0
+     # create a empty variable  
+    cents = x * 100 - int_x * 100 
+    #subtract the float of x multipled by 100 by the int of x multiplied by 100 to find the cents remainder
     i = 0
-    for i in coin_counts:
-        coin_counts[i] = cents / coins[i]
-        cents = cents % coins[i]
+    for money in coin_counts: # create a for loop that iterates through the different coin denominations 
+        money = cents / coins[i] # divide cents by coins[i] to find how many of each coin 
+        cents = cents % coins[i] # find the remainder of the cents % coins to find the new remainder
+
+        coin_counts[i] = int(money) # cast the result of the division to an int and store it in coincounts [i]
+        
+        
 
         i+=1
-
+        #increase the array size by 1 each time 
     print("quaters: "+str(coin_counts[0])+" dimes: "+str(coin_counts[1])+" nickles: "+str(coin_counts[2]))
+    # prints out the amount of change from the float inputed
 
+def rpc_game():
+    choice = int(input(" please enter 1 for rock, 2 for paper, and 3 for scissors: "))
 
+    
 
 
 

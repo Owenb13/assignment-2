@@ -148,14 +148,63 @@ def change_machine():
 
 def rpc_game():
     choice = int(input(" please enter 1 for rock, 2 for paper, and 3 for scissors: "))
+    # asks the user to choose rock papar or scissors 
 
+    if choice == 1:  # create if else statemnts to show the user what they chose
+        print("you chose rock")
+    elif choice == 2:
+        print("you chose paper")
+    elif choice == 3:
+        print("you chose scissors")
+
+    import random
     
+    ai_choice = random.randint(0,30) # random number generator from 0-30
+
+# determines wether the ai choice is rock paper or scissors 
+    if ai_choice <= 9:
+        rand_num = 1
+        print (" The AI chose rock")
+        
+    elif 10<= ai_choice <= 19:
+        rand_num = 2
+        print("the AI chose paper")
+    elif 20<= ai_choice <= 30:
+        rand_num = 3
+        print("the AI chose scissors")
+    
+ # creates game logic to determine if you win lose or tie  
+    if choice == 1:
+        if choice - rand_num == 0:
+            print("you tied")
+
+        elif choice - rand_num == -1:
+            print("loser")
+        elif choice - rand_num == -2:
+            print("winner")
+
+    elif choice == 2:
+        if choice - rand_num == 0:
+            print("you tied")
+
+        elif choice - rand_num == -1:
+            print("loser")
+        elif choice - rand_num == 1:
+            print("winner")
+        
+    elif choice == 3:
+        if choice - rand_num == 0:
+            print("you tied")
+
+        elif choice - rand_num == 1:
+            print("winner")
+        elif choice - rand_num == 2:
+            print("Loser")
 
 
-
-
-
-
+def mario_stairs():
+    level  = int(input("enter a value for the height of the level: "))
+    
 
 print("choose one of the following options") # create a list of options for the user to choose from
 print("0. Modulo claculator")

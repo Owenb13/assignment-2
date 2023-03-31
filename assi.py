@@ -58,17 +58,25 @@ def for_loop_counter():
     # asks the user for an increment value and stores it in increment
 
     is_positive = int(input("should the counter decrement, if so type 1 , if false type 2: "))
+ # asks the user if they would like to decrement
+    
+    if is_positive == 1:  # if statemnt to seperate increment or decrement option
+        for i in range(loop_count):
+            # for loop that iterates in the range of the loop count
 
-    i = 0 
-    if is_positive == 1:
-        for i in loop_count:
-            counter = counter + increment
-            
+            counter = counter - increment
+            # counter gets decremented by the increment value
 
     else:
-        print("goodbye")
+        for i in range(loop_count):
+            # for loop that iterates in the range of the loop count
 
-    print(""+ +str(counter))
+
+            counter = counter + increment
+        # counter gets added to the increment value each time 
+
+    print(""+str(counter))
+    #prints out the result of the counter at the end
 
 
 
@@ -89,6 +97,45 @@ def integer_float_addition():
     print(" the result of " +str(x)+ " added to "+str(y)+" is "+z)
 
 def ascii_string_values():
+    
+    user_str = input("please enter a string to find the ascii values of there letters: ")
+    #asks the user to input a string and stores it in user_str
+
+    str_size = len(user_str)
+    #finds the lenght of the string inputed
+   
+    i = 0 
+    while(i < str_size):
+      #creates a while loop that iterates while i is less than the length of the string
+
+      ascii =   ord(user_str[i])
+      # finds the ascii value of the string
+
+      print("the letter imputed "+user_str[i]+" has an ascii value "+ str(ascii) )
+        # printds out the letter in the string and corresponding ascii value
+      i+=1
+    # increases variable i by 1 each time the loop runns
+
+def change_machine():
+
+    coins =[25,10,5]
+
+    coin_counts = []
+
+    x = float(input("please enter a float value: "))
+     
+    int_x = int(x)
+
+    cents = x * 100 - int_x * 100
+    i = 0
+    for i in coin_counts:
+        coin_counts[i] = cents / coins[i]
+        cents = cents % coins[i]
+
+        i+=1
+
+    print("quaters: "+str(coin_counts[0])+" dimes: "+str(coin_counts[1])+" nickles: "+str(coin_counts[2]))
+
 
 
 
@@ -121,6 +168,13 @@ elif user_input == 4:
     integer_float_addition()
 elif user_input == 5:
     ascii_string_values()
+elif user_input == 6:
+    change_machine()
+elif user_input == 7:
+    rpc_game()
+elif user_input == 8:
+    mario_stairs()
+
 
 
 

@@ -59,12 +59,36 @@ def for_loop_counter():
 
     is_positive = int(input("should the counter decrement, if so type 1 , if false type 2: "))
 
+    i = 0 
     if is_positive == 1:
-        for 
+        for i in loop_count:
+            counter = counter + increment
+            
+
     else:
         print("goodbye")
 
+    print(""+ +str(counter))
 
+
+
+def integer_float_addition():
+
+    x = int(input("please enetr an integer value: "))
+    # asks the user for an integer value and stores it in x 
+
+    y = float(input("please enter a float value: "))
+    # asks the user for a float and stores iot in y
+   
+    z = y + float(x)
+    # adds the two values togeather and casts the x value to a float
+    
+    z = str(z)
+    # casts the result to a string to be printed
+
+    print(" the result of " +str(x)+ " added to "+str(y)+" is "+z)
+
+def ascii_string_values():
 
 
 
@@ -93,6 +117,11 @@ elif user_input == 2:
     float_integer_calc()
 elif user_input == 3:
     for_loop_counter()
+elif user_input == 4:
+    integer_float_addition()
+elif user_input == 5:
+    ascii_string_values()
+
 
 
 

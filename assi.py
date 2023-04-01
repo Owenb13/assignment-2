@@ -204,11 +204,20 @@ def rpc_game():
 
 def mario_stairs():
     level  = int(input("enter a value for the height of the level: "))
-    level_count = level
-    level = level - 1
-    for i in range(level_count):
-        print(" ")
-        
+    
+    space = level
+    counter = 0
+    for i in range(counter,level,1):
+        print(end=" " *(space - 1))
+        space = space - 1
+        print(end="#"*(counter + 1))
+        counter = counter + 1
+        if space == level-1:
+            print("   <")
+        else:
+            print("   |")
+       
+    
         
     #create a for loop to add spaces 
     # create a fo loop to put in hashtags 

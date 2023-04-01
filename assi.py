@@ -204,23 +204,26 @@ def rpc_game():
 
 def mario_stairs():
     level  = int(input("enter a value for the height of the level: "))
+    # asked the user for the amount of levels they would like to create and stores that in level count 
     
-    space = level
-    counter = 0
+    space = level # makes a variable called space and makes it equal to level
+    counter = 0 # creates a counter variable and set it to zero
     for i in range(counter,level,1):
+        # create a for loop that starts at the counter until it reaches the level and increases by 1 each time
         print(end=" " *(space - 1))
+        # multiplies the number of spaces by the space variable -1 
         space = space - 1
+        # decrements the space variable by 1 each time 
         print(end="#"*(counter + 1))
+        # prints out the number of # in each level by multipling hastags by 1+ counter
         counter = counter + 1
+        # increases the counter by 1 each time the loop runs 
         if space == level-1:
             print("   <")
+            # prints out a flag if it is the first iteration of the loop
         else:
             print("   |")
-       
-    
-        
-    #create a for loop to add spaces 
-    # create a fo loop to put in hashtags 
+            # prints ot the pole for every level except for the first
     
 
 print("choose one of the following options") # create a list of options for the user to choose from
@@ -235,7 +238,7 @@ print("7. rock paper scissors")
 print("8. mario stairs")
 user_input= int(input(" What is your selection: "))    # ask the user what operation they would like to choose
 
-if user_input == 0:
+if user_input == 0:  # create multiple if else statements to call the function from the choice selected
     modulo_calculator()
 elif user_input == 1:
     integer_division_calc()
